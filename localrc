@@ -1,0 +1,5 @@
+LOGFILE=/opt/stack/logs/stack.sh.log
+ADMIN_PASSWORD=labstack
+MYSQL_PASSWORD=supersecret
+SERVICE_PASSWORD=supersecrete
+SERVICE_TOKEN=xyzpdqlazydog

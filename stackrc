@@ -1,0 +1,46 @@
+# stackrc
+#
+# Find the other rc files
+RC_DIR=$(cd $(dirname "$BASH_SOURCE") && pwd)
+
+# Destination path for installation
+DEST=/opt/stack
+
+# Specify which services to launch.  These generally correspond to
+# screen tabs. To change the default list, use the ``enable_service`` and
+# ``disable_service`` functions in ``localrc``.
+# For example, to enable Swift add this to ``localrc``:
+# enable_service swift
+#
+# And to disable Cinder and use Nova Volumes instead:
+# disable_service c-api c-sch c-vol cinder
+# enable_service n-vol
+ENABLED_SERVICES=g-api,g-reg,key,swift,mysql
+
+# Repositories
+# ------------
+
+# Base GIT Repo URL
+# Another option is http://review.openstack.org/p
+GIT_BASE=https://github.com
+
+# storage service
+SWIFT_REPO=${GIT_BASE}/openstack/swift.git
+SWIFT_BRANCH=master
+
+# python swift client library
+SWIFTCLIENT_REPO=${GIT_BASE}/openstack/python-swiftclient
+SWIFTCLIENT_BRANCH=master
+
+# unified auth system (manages accounts/tokens)
+KEYSTONE_REPO=${GIT_BASE}/openstack/keystone.git
+KEYSTONE_BRANCH=master
+
+# python keystone client library to nova that horizon uses
+KEYSTONECLIENT_REPO=${GIT_BASE}/openstack/python-keystoneclient
+KEYSTONECLIENT_BRANCH=master
+
+# allow local overrides of env variables
+if [ -f $RC_DIR/localrc ]; then
+    source $RC_DIR/localrc
+fi
