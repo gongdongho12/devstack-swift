@@ -1,4 +1,13 @@
+# logs
 LOGFILE=/opt/stack/logs/stack.sh.log
+SCREEN_LOGDIR=$DEST/logs/screen
+
+# swift
+SWIFT_HASH=openstackswift
+SWIFT_REPLICAS=1
+SWIFT_DATA_DIR=$DEST/data
+
+# system password
 ADMIN_PASSWORD=labstack
 MYSQL_PASSWORD=supersecret
 SERVICE_PASSWORD=supersecrete
