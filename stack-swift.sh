@@ -2,7 +2,7 @@
 
 # ``stack-swift.sh`` is an OpenStack Swift installation.
 
-#### Created by 2012.11.09 MNL Solution R&D Center NaleeJang 
+#### Created by 2012.11.09 NaleeJang 
 
 # This script allows you to specify configuration options of what git
 # repositories to use, enabled services, various passwords.
